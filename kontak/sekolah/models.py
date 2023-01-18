@@ -7,13 +7,13 @@ class StatusSekolah(models.TextChoices):
     NEGERI = 'N', _('Negeri')
 
 class sekolah(models.Model):
-    npsn = models.CharField(max_length=10, null=False, default='0')
+    npsn = models.CharField(max_length=10, null=False, default='')
     nama = models.CharField(max_length=50)
     status = models.CharField(
         max_length=1,
         choices=StatusSekolah.choices,
         null=False, 
-        default='0',
+        default='',
     )
     email = models.CharField(max_length=50)
     web = models.CharField(max_length=100, blank=True, null=True)

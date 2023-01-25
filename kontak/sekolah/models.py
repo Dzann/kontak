@@ -17,11 +17,11 @@ class sekolah(models.Model):
     )
     email = models.CharField(max_length=50)
     web = models.CharField(max_length=100, blank=True, null=True)
-    Telp = models.CharField(max_length=20)
     alamat = models.TextField(blank=True, null=True)
     provinsi = models.CharField(max_length=50,blank=True, null=True)
-    kabupaten_atau_kota = models.CharField(max_length=50,blank=True, null=True)
+    kabupaten_kota = models.CharField(max_length=50,blank=True, null=True)
     kecamatan = models.CharField(max_length=50,blank=True, null=True)
+    Telp = models.CharField(max_length=20)
 
     # created_by = models.ForeignKey
     create_at = models.DateTimeField(auto_now_add=True)
